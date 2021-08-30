@@ -1,2 +1,2 @@
 # Revature Champs Project
-Revature Project 0
+In your Order trigger, you have code that will never be reached. You check to see if an Order in trigger.new has no id, and then you set it a manual id if this is the case. Not only should you NEVER set the id field, but this code could never be possibly reached because this code only fires from an AFTER_INSERT context; meaning it's impossible for these orders to ever have a null ID field.
